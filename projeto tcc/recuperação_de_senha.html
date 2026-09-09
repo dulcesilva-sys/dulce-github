@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Recuperar Senha - ArtBridge</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background-image:url("imagens/CAPS.jpg");
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+    min-height:100vh;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.recuperar{
+    width:420px;
+    background:rgba(0,0,0,0.75);
+    padding:40px;
+    border-radius:10px;
+    text-align:center;
+}
+
+.logo{
+    background:white;
+    color:black;
+    display:inline-block;
+    padding:8px 20px;
+    font-size:40px;
+    font-family:"Times New Roman", serif;
+    margin-bottom:20px;
+}
+
+h2{
+    color:white;
+    margin-bottom:15px;
+}
+
+p{
+    color:#ccc;
+    font-size:14px;
+    margin-bottom:25px;
+    line-height:22px;
+}
+
+input{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    margin-bottom:20px;
+    font-size:15px;
+}
+
+button{
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:5px;
+    background:#ffffff;
+    color:black;
+    font-size:16px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+button:hover{
+    background:#dddddd;
+}
+
+.voltar{
+    margin-top:20px;
+}
+
+.voltar a{
+    color:white;
+    text-decoration:none;
+}
+
+.voltar a:hover{
+    text-decoration:underline;
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="recuperar">
+
+    <div class="logo">ARTBRIDGE</div>
+
+    <h2>Esqueceu sua senha?</h2>
+
+    <p>
+        Digite o e-mail da sua conta. Enviaremos um link para redefinir sua senha.
+    </p>
+
+    <input type="email" placeholder="Digite seu e-mail">
+
+    <button>Enviar link de recuperação</button>
+
+    <div class="voltar">
+        <a href="prototipo_inicial.html">← Voltar para o login</a>
+    </div>
+
+</div>
+
+</body>
+</html>
