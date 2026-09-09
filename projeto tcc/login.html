@@ -1,117 +1,201 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Criar Conta - ArtBridge</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ArtBridge</title>
 
-<style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
-}
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
 
-body{
-    background-image:url("imagens/CAPS.jpg");
-    background-size:cover;
-    background-position:center;
-    background-repeat:no-repeat;
-    min-height:100vh;
+        body{
+            background-image:url("imagens/CAPS.jpg");
+            background-repeat:no-repeat;
+            background-size:cover;
+            background-position:center;
+            min-height:100vh;
 
-    display:flex;
-    justify-content:center;
-    align-items:center;
-}
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
 
-.cadastro{
-    width:430px;
-    background:rgba(0,0,0,0.75);
-    padding:40px;
-    border-radius:10px;
-    text-align:center;
-}
+        .login{
+            width:400px;
+            background:rgba(0,0,0,0.75);
+            padding:40px;
+            text-align:center;
+            border-radius:10px;
+        }
 
-.logo{
-    background:white;
-    color:black;
-    display:inline-block;
-    padding:8px 20px;
-    font-size:40px;
-    font-family:"Times New Roman", serif;
-    margin-bottom:25px;
-}
+        .logo{
+            background:white;
+            color:black;
+            display:inline-block;
+            padding:8px 20px;
+            font-size:42px;
+            font-family:"Times New Roman", serif;
+            margin-bottom:25px;
+        }
 
-h2{
-    color:white;
-    margin-bottom:25px;
-}
+        h2{
+            color:#bdbdbd;
+            font-weight:normal;
+            margin-bottom:25px;
+        }
 
-input{
-    width:100%;
-    padding:12px;
-    margin-bottom:15px;
-    border:none;
-    border-radius:5px;
-    font-size:15px;
-}
+        input{
+            width:100%;
+            padding:12px;
+            margin-bottom:15px;
+            border:none;
+            border-radius:5px;
+            font-size:15px;
+        }
 
-button{
-    width:100%;
-    padding:12px;
-    background:white;
-    color:black;
-    border:none;
-    border-radius:5px;
-    font-size:16px;
-    font-weight:bold;
-    cursor:pointer;
-}
+        .esqueceu{
+            text-align:right;
+            margin-top:-5px;
+            margin-bottom:20px;
+        }
 
-button:hover{
-    background:#ddd;
-}
+        .esqueceu a{
+            color:white;
+            text-decoration:none;
+            font-size:14px;
+        }
 
-.login{
-    margin-top:20px;
-    color:#ccc;
-}
+        .esqueceu a:hover{
+            text-decoration:underline;
+        }
 
-.login a{
-    color:white;
-    text-decoration:none;
-}
+        .entrar{
+            width:100%;
+            padding:12px;
+            background:white;
+            color:black;
+            border:none;
+            border-radius:5px;
+            font-size:16px;
+            font-weight:bold;
+            cursor:pointer;
+            margin-bottom:20px;
+        }
 
-.login a:hover{
-    text-decoration:underline;
-}
-</style>
+        .entrar:hover{
+            background:#dddddd;
+        }
+
+        .linha{
+            display:flex;
+            align-items:center;
+            color:#777;
+            margin:20px 0;
+        }
+
+        .linha::before,
+        .linha::after{
+            content:"";
+            flex:1;
+            height:1px;
+            background:#555;
+        }
+
+        .linha span{
+            margin:0 10px;
+        }
+
+        .google{
+            width:100%;
+            background:white;
+            border:none;
+            padding:12px;
+            border-radius:5px;
+            font-size:17px;
+            cursor:pointer;
+        }
+
+        .google img{
+            width:20px;
+            vertical-align:middle;
+            margin-right:10px;
+        }
+
+        .criar{
+            margin-top:20px;
+            color:#999;
+            font-size:14px;
+        }
+
+        .criar a{
+            color:white;
+            text-decoration:none;
+            font-weight:bold;
+        }
+
+        .criar a:hover{
+            text-decoration:underline;
+        }
+
+        .termos{
+            margin-top:20px;
+            color:#999;
+            font-size:12px;
+            line-height:18px;
+        }
+
+        .termos a{
+            color:white;
+            text-decoration:none;
+        }
+    </style>
 </head>
 
 <body>
 
-<div class="cadastro">
+<div class="login">
 
     <div class="logo">
         ARTBRIDGE
     </div>
 
-    <h2>Criar Conta</h2>
+    <h2>Faça seu login</h2>
 
-    <input type="text" placeholder="Nome completo">
+    <input type="email" placeholder="email@dominio.com">
 
-    <input type="email" placeholder="E-mail">
+    <input type="password" placeholder="Senha">
 
-    <input type="password" placeholder="Criar senha">
+    <div class="esqueceu">
+        <a href="recuperação_de_senha.html">Esqueceu a senha?</a>
+    </div>
 
-    <input type="password" placeholder="Confirmar senha">
+    <button class="entrar">
+        Entrar
+    </button>
 
-    <button>Criar Conta</button>
+    <div class="linha">
+        <span>ou continue com</span>
+    </div>
 
-    <div class="login">
-        Já possui uma conta?
-        <a href="prototipo_inicial.html">Entrar</a>
+    <button class="google">
+        <img src="imagens/img.png" alt="Google">
+        Google
+    </button>
+
+    <div class="criar">
+        Não possui uma conta?
+        <a href="cadastro.html">Criar conta</a>
+    </div>
+
+    <div class="termos">
+        Ao continuar, você concorda com os nossos
+        <a href="termos.html">Termos de Serviço</a> e
+        <a href="politica.html">Política de Privacidade</a>.
     </div>
 
 </div>
